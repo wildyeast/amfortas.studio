@@ -73,22 +73,9 @@ main {
     letter-spacing: 0.05em;
 }
 
-/* Manifesto */
-.manifesto {
-    text-align: center;
-    margin-bottom: 4rem;
-}
-
-.manifesto p {
-    font-size: 1.1rem;
-    margin-bottom: 1rem;
-    max-width: 480px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.manifesto .soon {
-    margin-top: 2rem;
+/* Soon */
+.soon {
+    margin-top: 1.5rem;
     font-style: italic;
     color: var(--muted);
     font-size: 1rem;
@@ -134,34 +121,68 @@ main {
     width: 100%;
 }
 
-.signup-form .formkit-field {
+/* Kit Form Overrides */
+.formkit-form {
     width: 100%;
+    max-width: 360px;
 }
 
-.signup-form .formkit-input {
+.formkit-form .formkit-field {
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.formkit-form .formkit-input {
     width: 100%;
     padding: 0.9rem 1rem;
-    background: transparent;
-    border: 1px solid var(--muted);
-    border-radius: 2px;
-    color: var(--text);
+    background: transparent !important;
+    border: 1px solid var(--muted) !important;
+    border-radius: 2px !important;
+    color: var(--text) !important;
     font-size: 1rem;
     text-align: center;
 }
 
-.signup-form .formkit-input:focus {
+.formkit-form .formkit-input:focus {
     outline: none;
-    border-color: var(--accent);
+    border-color: var(--accent) !important;
 }
 
-.signup-form .formkit-input::placeholder {
-    color: var(--muted);
+.formkit-form .formkit-input::placeholder {
+    color: var(--muted) !important;
+}
+
+.formkit-form .formkit-submit {
+    width: 100%;
+    background: transparent !important;
+    border: 1px solid var(--muted) !important;
+    border-radius: 2px !important;
+    color: var(--text) !important;
+    padding: 0.8rem 2rem !important;
+    font-size: 0.9rem;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.formkit-form .formkit-submit:hover {
+    background: var(--accent) !important;
+    color: var(--bg) !important;
+    border-color: var(--accent) !important;
+}
+
+.formkit-form .formkit-submit span {
+    padding: 0 !important;
+}
+
+.formkit-powered-by-convertkit-container {
+    display: none !important;
 }
 
 .form-note {
     font-size: 0.8rem;
     color: var(--muted);
-    margin-top: 0.5rem;
+    margin-top: 1rem;
 }
 
 .form-note a {
