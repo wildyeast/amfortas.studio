@@ -1,0 +1,248 @@
+/* Kraftfeld page styles */
+
+.kraftfeld-page main {
+    max-width: 800px;
+    padding-top: 3rem;
+}
+
+.back-link {
+    display: inline-block;
+    color: var(--muted);
+    text-decoration: none;
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+}
+
+.back-link:hover {
+    color: var(--text);
+}
+
+.kraftfeld-page .hero {
+    margin-bottom: 3rem;
+}
+
+.kraftfeld-page .hero h1 {
+    font-family: 'Cardinal', serif;
+    font-size: 4rem;
+    font-weight: normal;
+    letter-spacing: 0.02em;
+    margin-bottom: 0.5rem;
+}
+
+.kraftfeld-page .tagline {
+    color: var(--muted);
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+}
+
+.kraftfeld-page .hook {
+    font-size: 1.5rem;
+    font-style: italic;
+    color: var(--text);
+}
+
+/* Intro */
+.intro {
+    margin-bottom: 4rem;
+    text-align: center;
+}
+
+.intro .lead {
+    font-size: 1.3rem;
+    color: var(--text);
+    margin-bottom: 1rem;
+}
+
+.intro p {
+    color: var(--muted);
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+/* Video */
+.video-section {
+    margin-bottom: 4rem;
+}
+
+.video-section h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.video-placeholder {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px dashed var(--muted);
+    border-radius: 4px;
+    aspect-ratio: 16/9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--muted);
+    font-size: 0.9rem;
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+@media (max-width: 600px) {
+    .video-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Features */
+.features {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+@media (max-width: 600px) {
+    .features {
+        grid-template-columns: 1fr;
+    }
+}
+
+.feature h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--text);
+}
+
+.feature p {
+    font-size: 0.95rem;
+    color: var(--muted);
+    line-height: 1.6;
+}
+
+/* CTA */
+.cta-section {
+    text-align: center;
+    margin-bottom: 4rem;
+    padding: 3rem 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.coming-soon {
+    font-size: 1.2rem;
+    color: var(--text);
+    margin-bottom: 2rem;
+}
+
+.signup {
+    margin-top: 2rem;
+}
+
+.signup > p {
+    color: var(--muted);
+    margin-bottom: 1rem;
+}
+
+/* Press */
+.press {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.press h2 {
+    margin-bottom: 1rem;
+}
+
+.press p {
+    color: var(--muted);
+    margin-bottom: 1rem;
+}
+
+.press-link {
+    color: var(--text);
+    text-decoration: none;
+    border: 1px solid var(--muted);
+    padding: 0.6rem 1.5rem;
+    border-radius: 2px;
+    display: inline-block;
+    transition: all 0.2s ease;
+}
+
+.press-link:hover {
+    background: var(--accent);
+    color: var(--bg);
+    border-color: var(--accent);
+}
+
+/* Footer */
+.kraftfeld-page footer {
+    text-align: center;
+    padding: 2rem 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Press Kit Page */
+.presskit-content {
+    max-width: 600px;
+}
+
+.presskit-content h2 {
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--muted);
+}
+
+.presskit-content h2:first-child {
+    margin-top: 0;
+}
+
+.presskit-content h3 {
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+
+.presskit-content p {
+    color: var(--muted);
+    line-height: 1.7;
+    margin-bottom: 1rem;
+}
+
+.presskit-content ul {
+    color: var(--muted);
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.presskit-content li {
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+}
+
+.presskit-content a {
+    color: var(--text);
+}
+
+.presskit-content .placeholder {
+    font-style: italic;
+}
