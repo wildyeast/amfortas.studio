@@ -42,54 +42,9 @@
         </section>
 
         <section class="signal">
-            <form id="signup" class="signup-form">
-                <input type="email" name="email" placeholder="your@email.com" required>
-                <label class="consent">
-                    <input type="checkbox" name="consent" required>
-                    <span>I'm in. Send me the signal when something drops. (<a href="/privacy">Privacy</a>)</span>
-                </label>
-                <button type="submit" class="cta">Join the waitlist →</button>
-                <p class="form-status"></p>
-            </form>
+            <script async src="https://amfortas.kit.com/5d75c93e74/index.js"></script>
+            <p class="privacy-note">By subscribing, you agree to our <a href="/privacy">privacy policy</a>.</p>
         </section>
-
-        <script>
-        document.getElementById('signup').addEventListener('submit', async (e) => {
-            e.preventDefault();
-            const form = e.target;
-            const status = form.querySelector('.form-status');
-            const email = form.email.value;
-            const btn = form.querySelector('button');
-            
-            btn.disabled = true;
-            btn.textContent = 'Joining...';
-            
-            try {
-                const res = await fetch('https://api.kit.com/v4/forms/9058652/subscribers', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                        'X-Kit-Api-Key': 'kit_de10f0830defc856944e419d812a0a54'
-                    },
-                    body: JSON.stringify({ email_address: email })
-                });
-                
-                if (res.ok) {
-                    status.textContent = "You're on the list. We'll be in touch.";
-                    status.className = 'form-status success';
-                    form.reset();
-                } else {
-                    throw new Error('Signup failed');
-                }
-            } catch (err) {
-                status.textContent = 'Something went wrong. Try again?';
-                status.className = 'form-status error';
-            }
-            
-            btn.disabled = false;
-            btn.textContent = 'Join the waitlist →';
-        });
-        </script>
 
         <footer>
             <nav class="footer-nav">
