@@ -122,57 +122,74 @@ main {
 }
 
 /* Kit Form Overrides */
-.formkit-form {
-    width: 100%;
-    max-width: 360px;
+.formkit-form[data-uid="5d75c93e74"] {
+    width: 100% !important;
+    max-width: 360px !important;
+    background: transparent !important;
 }
 
-.formkit-form .formkit-field {
-    width: 100%;
-    margin-bottom: 1rem;
+.formkit-form[data-uid="5d75c93e74"] [data-style="clean"] {
+    padding: 0 !important;
 }
 
-.formkit-form .formkit-input {
-    width: 100%;
-    padding: 0.9rem 1rem;
+.formkit-form[data-uid="5d75c93e74"] .formkit-fields {
+    flex-direction: column !important;
+    gap: 1rem;
+}
+
+.formkit-form[data-uid="5d75c93e74"] .formkit-field,
+.formkit-form[data-uid="5d75c93e74"] .formkit-submit {
+    flex: none !important;
+    margin: 0 !important;
+}
+
+.formkit-form[data-uid="5d75c93e74"] .formkit-input {
+    width: 100% !important;
+    padding: 0.9rem 1rem !important;
     background: transparent !important;
     border: 1px solid var(--muted) !important;
     border-radius: 2px !important;
     color: var(--text) !important;
-    font-size: 1rem;
+    font-size: 1rem !important;
     text-align: center;
 }
 
-.formkit-form .formkit-input:focus {
-    outline: none;
+.formkit-form[data-uid="5d75c93e74"] .formkit-input:focus {
+    outline: none !important;
     border-color: var(--accent) !important;
 }
 
-.formkit-form .formkit-input::placeholder {
+.formkit-form[data-uid="5d75c93e74"] .formkit-input::placeholder {
     color: var(--muted) !important;
+    opacity: 1 !important;
 }
 
-.formkit-form .formkit-submit {
-    width: 100%;
+.formkit-form[data-uid="5d75c93e74"] .formkit-submit {
+    width: 100% !important;
     background: transparent !important;
     border: 1px solid var(--muted) !important;
     border-radius: 2px !important;
     color: var(--text) !important;
-    padding: 0.8rem 2rem !important;
-    font-size: 0.9rem;
+    font-size: 0.9rem !important;
     letter-spacing: 0.05em;
     cursor: pointer;
     transition: all 0.2s ease;
 }
 
-.formkit-form .formkit-submit:hover {
+.formkit-form[data-uid="5d75c93e74"] .formkit-submit:hover {
     background: var(--accent) !important;
     color: var(--bg) !important;
     border-color: var(--accent) !important;
 }
 
-.formkit-form .formkit-submit span {
-    padding: 0 !important;
+.formkit-form[data-uid="5d75c93e74"] .formkit-submit span {
+    padding: 0.8rem 2rem !important;
+}
+
+.formkit-form[data-uid="5d75c93e74"] .formkit-alert-success {
+    background: rgba(16, 191, 122, 0.1) !important;
+    border-color: #10bf7a !important;
+    color: #10bf7a !important;
 }
 
 .formkit-powered-by-convertkit-container {
