@@ -134,7 +134,11 @@ main {
     width: 100%;
 }
 
-.signup-form input[type="email"] {
+.signup-form .formkit-field {
+    width: 100%;
+}
+
+.signup-form .formkit-input {
     width: 100%;
     padding: 0.9rem 1rem;
     background: transparent;
@@ -145,32 +149,22 @@ main {
     text-align: center;
 }
 
-.signup-form input[type="email"]:focus {
+.signup-form .formkit-input:focus {
     outline: none;
     border-color: var(--accent);
 }
 
-.signup-form input[type="email"]::placeholder {
+.signup-form .formkit-input::placeholder {
     color: var(--muted);
 }
 
-.consent {
-    display: flex;
-    align-items: flex-start;
-    gap: 0.6rem;
-    font-size: 0.85rem;
+.form-note {
+    font-size: 0.8rem;
     color: var(--muted);
-    cursor: pointer;
-    text-align: left;
-    line-height: 1.4;
+    margin-top: 0.5rem;
 }
 
-.consent input[type="checkbox"] {
-    margin-top: 0.15rem;
-    accent-color: var(--accent);
-}
-
-.consent a {
+.form-note a {
     color: var(--text);
 }
 

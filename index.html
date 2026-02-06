@@ -42,15 +42,35 @@
         </section>
 
         <section class="signal">
-            <form action="https://app.kit.com/forms/9058652/subscriptions" method="post" class="signup-form" data-sv-form="9058652" data-uid="5d75c93e74">
-                <input type="hidden" name="fields[source]" value="amfortas.studio">
-                <input type="email" name="email_address" placeholder="your@email.com" required>
-                <label class="consent">
-                    <input type="checkbox" required>
-                    <span>I'm in. Hit me when something drops. (<a href="/privacy">Privacy</a>)</span>
-                </label>
+            <form id="signup" class="signup-form" data-sv-form="9058652" data-uid="5d75c93e74" data-format="inline" data-version="5">
+                <div class="formkit-field">
+                    <input class="formkit-input" name="email_address" placeholder="your@email.com" required type="email">
+                </div>
                 <button type="submit" class="cta">Join the waitlist →</button>
+                <p class="form-note">By subscribing you agree to our <a href="/privacy">privacy policy</a>.</p>
             </form>
+
+            <script>
+            document.getElementById('signup').addEventListener('submit', function(e) {
+                e.preventDefault();
+                const form = this;
+                const btn = form.querySelector('button');
+                btn.disabled = true;
+                btn.textContent = 'Joining...';
+                
+                // Load Kit JS only on submit (GDPR: no third-party scripts until user action)
+                const script = document.createElement('script');
+                script.src = 'https://f.convertkit.com/ckjs/ck.5.js';
+                script.onload = function() {
+                    // Kit JS loaded, now submit properly
+                    form.removeEventListener('submit', arguments.callee);
+                    form.action = 'https://app.kit.com/forms/9058652/subscriptions';
+                    form.method = 'post';
+                    form.submit();
+                };
+                document.head.appendChild(script);
+            });
+            </script>
         </section>
 
         <footer>
