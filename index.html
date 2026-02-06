@@ -42,8 +42,14 @@
         </section>
 
         <section class="signal">
-            <script async src="https://amfortas.kit.com/5d75c93e74/index.js"></script>
-            <p class="privacy-note">By subscribing, you agree to our <a href="/privacy">privacy policy</a>.</p>
+            <form action="https://app.kit.com/forms/9058652/subscriptions" method="post" class="signup-form">
+                <input type="email" name="email_address" placeholder="your@email.com" required>
+                <label class="consent">
+                    <input type="checkbox" name="gdpr_consent" required>
+                    <span>I'm in. Hit me when something drops. (<a href="/privacy">Privacy</a>)</span>
+                </label>
+                <button type="submit" class="cta">Join the waitlist →</button>
+            </form>
         </section>
 
         <footer>

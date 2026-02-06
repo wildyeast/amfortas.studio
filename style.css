@@ -118,21 +118,73 @@ main {
     border-color: var(--accent);
 }
 
-/* Kit Embed */
+/* Signup Form */
 .signal {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.privacy-note {
-    margin-top: 1rem;
-    font-size: 0.8rem;
+.signup-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    max-width: 360px;
+    width: 100%;
+}
+
+.signup-form input[type="email"] {
+    width: 100%;
+    padding: 0.9rem 1rem;
+    background: transparent;
+    border: 1px solid var(--muted);
+    border-radius: 2px;
+    color: var(--text);
+    font-size: 1rem;
+    text-align: center;
+}
+
+.signup-form input[type="email"]:focus {
+    outline: none;
+    border-color: var(--accent);
+}
+
+.signup-form input[type="email"]::placeholder {
     color: var(--muted);
 }
 
-.privacy-note a {
+.consent {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.6rem;
+    font-size: 0.85rem;
+    color: var(--muted);
+    cursor: pointer;
+    text-align: left;
+    line-height: 1.4;
+}
+
+.consent input[type="checkbox"] {
+    margin-top: 0.15rem;
+    accent-color: var(--accent);
+}
+
+.consent a {
     color: var(--text);
+}
+
+.signup-form button {
+    cursor: pointer;
+    background: transparent;
+    font-size: 0.9rem;
+    font-family: inherit;
+}
+
+.signup-form button:hover {
+    background: var(--accent);
+    color: var(--bg);
+    border-color: var(--accent);
 }
 
 /* Footer */
