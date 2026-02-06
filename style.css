@@ -80,12 +80,15 @@ main {
     letter-spacing: 0.05em;
 }
 
-/* Soon */
-.soon {
+/* Quote */
+.quote {
     margin-top: 1.5rem;
     font-style: italic;
     color: var(--muted);
     font-size: 1rem;
+    max-width: 480px;
+    line-height: 1.6;
+    text-align: center;
 }
 
 /* CTA */
@@ -363,12 +366,18 @@ footer {
         padding-top: 4rem;
     }
     
-    .hero h1 {
-        font-size: 1.5rem;
+    .logo {
+        width: 95%;
+        max-width: none;
     }
     
-    .manifesto p {
-        font-size: 1rem;
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .quote {
+        font-size: 0.9rem;
+        padding: 0 1rem;
     }
 }
 
